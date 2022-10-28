@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrayKosong = [];
+
+      let arrayName = ["Muhammad", "Afiv"];
+
+      const names = [];
+      names.push("Muhammad");
+      names.push("Afiv");
+      names.push("123", "456");
+
+      names[2] = "Udin";
+
+      console.table(names[2]);
+
+      delete names[3];
+
+      console.table(names);
+    </script>
+  </body>
+</html>
