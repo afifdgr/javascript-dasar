@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.info("Hello" || "");
+      console.info("" || []);
+      console.info("0" || "NOL");
+      console.info(0 || "NOL");
+      console.info(null || "NULL");
+      console.info(undefined || "UNDEFINED");
+      console.info(0 || false);
+
+      const person = {
+        firstName: "Muhammad",
+        lastName: "Afiv",
+      };
+
+      const person2 = {
+        firstName: null,
+        lastName: "Afiv",
+      };
+
+      // Menggunakan Non Boolean ||
+      const name = person.firstName || person.lastName;
+      document.writeln(`<p>Halo ${name}`); // Tampil Hallo Muhammad
+
+      console.info("hello" && "");
+      console.info("" && []);
+      console.info("0" && "NOL");
+      console.info(0 && "NOL");
+      console.info(null && "NULL");
+      console.info(undefined && "UNDEFINED");
+      console.info("undefined" && "null");
+
+      // Menggunakan Nulish
+      const nama = person2.firstName ?? person2.lastName;
+      document.writeln(`<p>Halo ${nama}`);
+    </script>
+  </body>
+</html>
