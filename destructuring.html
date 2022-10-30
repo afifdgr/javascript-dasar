@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        const names = ["Muhammad", "Afiv"];
+        let [firstName, lastName] = names;
+
+        console.info(firstName);
+        console.info(lastName);
+      }
+
+      {
+        const person = {
+          firstName: "Muhammad",
+          lastName: "Afiv",
+          address: {
+            street: "Jalan Jalan",
+            city: "Banjarnegara",
+            country: "Indonesia",
+          },
+          hobby: "Game",
+          status: "College Student",
+        };
+
+        let {
+          firstName,
+          lastName,
+          address: { city, street, country },
+          ...others
+        } = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+      }
+
+      {
+        function displayPerson({ firstName, lastName }) {
+          console.info(firstName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "Muhammad",
+          lastName: "Afiv",
+        };
+
+        displayPerson(person);
+      }
+
+      {
+        function sum([first, second]) {
+          return first + second;
+        }
+
+        console.info(sum([10, 1]));
+      }
+
+      {
+        const names = ["Muhammad"];
+        const [firstName, lastName = "Afiv"] = names;
+
+        console.info(firstName);
+        console.info(lastName);
+      }
+    </script>
+  </body>
+</html>
